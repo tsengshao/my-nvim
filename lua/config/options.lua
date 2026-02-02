@@ -13,7 +13,7 @@ vim.opt.termguicolors = true
 vim.opt.laststatus = 0
 
 -- No mouse (uncomment if you want fully keyboard-only)
--- vim.opt.mouse = ""
+vim.opt.mouse = ""
 
 -- System clipboard (macOS / Linux with clipboard support)
 -- vim.opt.clipboard = "unnamedplus"
