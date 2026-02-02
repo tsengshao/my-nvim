@@ -42,10 +42,15 @@ return {
       -- Base variables
       vim.api.nvim_set_hl(0, "@variable", hl)
       vim.api.nvim_set_hl(0, "@variable.member", hl)
-    
       -- Lua-specific (optional but explicit)
       vim.api.nvim_set_hl(0, "@variable.lua", hl)
       vim.api.nvim_set_hl(0, "@variable.member.lua", hl)
+      -- Properties (THIS is the missing piece)
+      vim.api.nvim_set_hl(0, "@property", hl)
+      vim.api.nvim_set_hl(0, "@property.lua", hl)
+      -- Functions (name)
+      vim.api.nvim_set_hl(0, "@function", hl)
+      vim.api.nvim_set_hl(0, "@function.lua", hl)
     end
 
     -- ---------------------------------------------------------
