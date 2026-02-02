@@ -14,8 +14,8 @@ end, { desc = "Toggle relativenumber" })
 
 -- Fast vertical resize (step = 5 columns)
 -- Note: keep it close to vim's <C-w> family
-map("n", "<C-w>,", "<cmd>vertical resize +5<CR>", { desc = "VResize +5" })
-map("n", "<C-w>.", "<cmd>vertical resize -5<CR>", { desc = "VResize -5" })
+map("n", "<leader>.", "<cmd>vertical resize +5<CR>", { desc = "VResize +5" })
+map("n", "<leader>,", "<cmd>vertical resize -5<CR>", { desc = "VResize -5" })
 
 -- =========================================================
 -- Window navigation (leader-based)
@@ -24,3 +24,9 @@ map("n", "<C-w>.", "<cmd>vertical resize -5<CR>", { desc = "VResize -5" })
 vim.keymap.set("n", "<leader>h", "<C-w>h", { desc = "Focus left window" })
 -- Move to right window (editor)
 vim.keymap.set("n", "<leader>l", "<C-w>l", { desc = "Focus right window" })
+
+-- Toggle folding on/off
+vim.keymap.set("n", "<leader>zf", function()
+  vim.opt.foldenable = not vim.opt.foldenable:get()
+end, { desc = "Toggle folding" })
+

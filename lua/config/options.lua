@@ -38,3 +38,22 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     end
   end,
 })
+
+-- ============================================================================
+-- Folding settings (indent-based)
+-- Stable, vim-like behavior
+-- ============================================================================
+-- za, zc, zo, zC, zO
+-- zM, zR
+
+-- Use indent-based folding
+vim.opt.foldmethod = "indent"
+-- Start with all folds open
+-- Large number means "do not auto close folds"
+vim.opt.foldlevel = 99
+-- Enable folding
+vim.opt.foldenable = true
+vim.opt.foldcolumn = "0"
+-- Do not show fold column (keep UI clean, vim-like)
+vim.opt.foldtext = "v:lua.vim.fn.getline(v:foldstart)"
+
