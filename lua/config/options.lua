@@ -10,12 +10,13 @@ vim.g.maplocalleader = " "
 vim.opt.number = false
 vim.opt.relativenumber = false
 vim.opt.termguicolors = true
+vim.opt.laststatus = 0
 
 -- No mouse (uncomment if you want fully keyboard-only)
 -- vim.opt.mouse = ""
 
 -- System clipboard (macOS / Linux with clipboard support)
-vim.opt.clipboard = "unnamedplus"
+-- vim.opt.clipboard = "unnamedplus"
 
 -- Indent
 vim.opt.expandtab = true
